@@ -91,14 +91,14 @@ class NavBar extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const ContactScreen();
-                  },
-                ),
-              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) {
+              //       return const ContactScreen();
+              //     },
+              //   ),
+              // );
             },
           ),
           ListTile(
@@ -112,35 +112,35 @@ class NavBar extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const ContactScreen();
-                  },
-                ),
-              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) {
+              //       return const ContactScreen();
+              //     },
+              //   ),
+              // );
             },
           ),
           ListTile(
             leading: const Icon(
-              Icons.redo_outlined,
+              Icons.church,
               size: 20,
               color: Color.fromARGB(255, 255, 255, 255),
             ),
             title: const Text(
-              "Refund management ",
+              "About Us ",
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const ContactScreen();
-                  },
-                ),
-              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) {
+              //       return const ContactScreen();
+              //     },
+              //   ),
+              // );
             },
           ),
           Lottie.asset("animations/sw_le.json"),

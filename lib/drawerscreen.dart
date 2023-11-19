@@ -15,7 +15,7 @@ class DrawerScreen extends StatelessWidget {
       angle: 0,
       duration: const Duration(milliseconds: 600),
       showShadow: true,
-      drawerShadowsBackgroundColor: const Color.fromARGB(255, 1, 41, 63),
+      drawerShadowsBackgroundColor: const Color.fromARGB(255, 97, 2, 113),
       slideWidth: MediaQuery.of(context).size.width * 0.75,
     );
   }

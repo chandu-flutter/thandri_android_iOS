@@ -81,6 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Padding(
                   padding: const EdgeInsets.only(top: 18.0),
                   child: Card(
+                    color: Colors.white,
                     elevation: 14,
                     child: Image(
                       image: NetworkImage(imageUrl, scale: 1.0),
