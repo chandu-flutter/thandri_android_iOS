@@ -136,7 +136,11 @@ class _NewScreenState extends State<NewScreen> {
                   child: InkWell(
                     onTap: () {
                       if (_formfield.currentState?.validate() == true) {
-                        fireStore.doc(nameController.text).set({
+                        fireStore
+                            .doc(nameController.text +
+                                "|" +
+                                phoneController.text)
+                            .set({
                           'name': nameController.text.toString(),
                           'mobile': phoneController.text.toString(),
                           'dob': dobController.text.toString(),

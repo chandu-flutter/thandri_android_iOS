@@ -89,7 +89,7 @@ class _PrayerRequestScreenState extends State<PrayerRequestScreen> {
                   padding: const EdgeInsets.only(
                       left: 28.0, right: 28, top: 15, bottom: 5),
                   child: TextFormField(
-                    maxLines: 20,
+                    maxLines: 15,
                     controller: prayerController,
                     decoration: const InputDecoration(
                       hintText: "Prayer Request",
@@ -104,7 +104,11 @@ class _PrayerRequestScreenState extends State<PrayerRequestScreen> {
                   child: InkWell(
                     onTap: () {
                       if (_formKey.currentState?.validate() == true) {
-                        fireStore.doc(nameController.text).set({
+                        fireStore
+                            .doc(nameController.text +
+                                "|" +
+                                phoneController.text)
+                            .set({
                           'name': nameController.text.toString(),
                           'mobile': phoneController.text.toString(),
                           'prayer': prayerController.text.toString(),

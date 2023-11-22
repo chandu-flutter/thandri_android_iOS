@@ -15,8 +15,17 @@ class _TestimonyScreenState extends State<TestimonyScreen> {
   //CollectionReference users = FirebaseFirestore.instance.collection("users");
   final _formKey = GlobalKey<FormState>();
   final nameController = TextEditingController();
+  final phoneController = TextEditingController();
   final testimonyController = TextEditingController();
   final fireStore = FirebaseFirestore.instance.collection("testimony");
+
+  String? validatePhone(String? value) {
+    if (value == null || value.isEmpty) {
+      return "Enter Your Mobile Number";
+    }
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +68,20 @@ class _TestimonyScreenState extends State<TestimonyScreen> {
                   padding: const EdgeInsets.only(
                       left: 28.0, right: 28, top: 5, bottom: 5),
                   child: TextFormField(
-                    maxLines: 20,
+                    controller: phoneController,
+                    decoration: const InputDecoration(
+                      hintText: "Your Phone Number",
+                      prefixIcon: Icon(Icons.phone_android),
+                      prefixIconColor: Color.fromARGB(255, 54, 1, 63),
+                    ),
+                    validator: validatePhone,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      left: 28.0, right: 28, top: 5, bottom: 5),
+                  child: TextFormField(
+                    maxLines: 15,
                     controller: testimonyController,
                     decoration: const InputDecoration(
                       hintText: "Your Testimony",
@@ -79,8 +101,13 @@ class _TestimonyScreenState extends State<TestimonyScreen> {
                   child: InkWell(
                     onTap: () {
                       if (_formKey.currentState?.validate() == true) {
-                        fireStore.doc(nameController.text).set({
+                        fireStore
+                            .doc(nameController.text +
+                                "|" +
+                                phoneController.text)
+                            .set({
                           'name': nameController.text.toString(),
+                          'mobile': phoneController.text.toString(),
                           'Testimony': testimonyController.text.toString(),
                         });
                         Navigator.push(
