@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thandri_sannidhi/home.dart';
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key});
@@ -9,7 +10,25 @@ class SuccessScreen extends StatelessWidget {
       appBar: AppBar(
         foregroundColor: Colors.white,
         title: const Text("Thank you"),
-        backgroundColor: const Color.fromARGB(255, 54, 1, 63),
+        backgroundColor: Color.fromARGB(255, 97, 3, 114),
+        centerTitle: true,
+        elevation: 40,
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.home),
+            highlightColor: Colors.white,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const HomeScreen();
+                  },
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: SafeArea(
           child: Container(

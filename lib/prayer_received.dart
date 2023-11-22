@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thandri_sannidhi/home.dart';
 
 class PrayerReceivedScreen extends StatelessWidget {
   const PrayerReceivedScreen({super.key});
@@ -8,9 +9,26 @@ class PrayerReceivedScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         foregroundColor: Colors.white,
-        title: const Text("Thank you for Sharing"),
-        backgroundColor: const Color.fromARGB(255, 54, 1, 63),
+        title: const Text("Thank you"),
+        backgroundColor: Color.fromARGB(255, 97, 3, 114),
         centerTitle: true,
+        elevation: 40,
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.home),
+            highlightColor: Colors.white,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const HomeScreen();
+                  },
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: SafeArea(
           child: Container(

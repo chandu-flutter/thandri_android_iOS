@@ -10,6 +10,7 @@ import 'package:thandri_sannidhi/prayer_request.dart';
 
 import 'package:thandri_sannidhi/songbook.dart';
 import 'package:thandri_sannidhi/website.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 
 import 'prayer_victories.dart';
 
@@ -31,6 +32,12 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     imageUrl = '';
     getImageUrl();
+    initPlatformState();
+  }
+
+  Future<void> initPlatformState() async {
+    OneSignal.initialize("5e3e8968-0e50-4f57-8960-8c0aa731891f");
+    OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
   }
 
   Future<void> getImageUrl() async {
