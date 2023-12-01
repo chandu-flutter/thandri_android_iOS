@@ -74,9 +74,10 @@ class _Mo3SongShowDetailsState extends State<Mo3SongShowDetails> {
               Text(
                 mp3songs[widget.index].name,
                 style: const TextStyle(
-                  fontSize: 22,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 54, 1, 63),
+                  fontFamily: 'ponnala',
                 ),
               ),
               Text(
@@ -130,7 +131,10 @@ class _Mo3SongShowDetailsState extends State<Mo3SongShowDetails> {
                   ],
                 ),
                 child: IconButton(
-                  icon: Icon(isPlaying ? Icons.pause : Icons.play_arrow),
+                  icon: Icon(
+                    isPlaying ? Icons.pause : Icons.play_arrow,
+                    color: const Color.fromARGB(255, 54, 1, 63),
+                  ),
                   iconSize: 50,
                   onPressed: () async {
                     if (isPlaying) {

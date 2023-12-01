@@ -43,14 +43,14 @@ dependencies:
   lottie: ^2.6.0
   flutter_inappwebview: ^5.8.0  
   google_maps_flutter: ^2.5.0
-  #flutter_launcher_icons: ^0.13.1
   firebase_storage: ^11.4.1
   firebase_messaging: ^14.7.3
   app_settings: ^5.1.1
-  onesignal_flutter: ^5.0.3
-  toast: ^0.3.0
+  onesignal_flutter: ^5.0.3 
   audioplayers: ^5.2.0 
-  just_audio: ^0.9.36
+  animate_do: ^3.1.2
+  styled_text: ^8.1.0
+
   
  
   
@@ -99,10 +99,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: ponnala
+      fonts:
+        - asset: fonts/ponnala.ttf
+    # - family: potti
+    #   fonts:
+    #     - asset: fonts/PottiSreeramulu.otf        
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

@@ -5,7 +5,7 @@ import 'package:thandri_sannidhi/firebase_options.dart';
 import 'package:thandri_sannidhi/splash.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 
-final navigatorKey = GlobalKey<NavigatorState>();
+final GlobalKey<NavigatorState> navigatorKey = new GlobalKey<NavigatorState>();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //Remove this method to stop OneSignal Debugging

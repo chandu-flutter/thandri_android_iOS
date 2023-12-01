@@ -110,14 +110,14 @@ class _TestimonyScreenState extends State<TestimonyScreen> {
                           'mobile': phoneController.text.toString(),
                           'Testimony': testimonyController.text.toString(),
                         });
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return const TestimonyReceivedScreen();
-                            },
-                          ),
-                        );
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //     builder: (context) => TestimonyReceivedScreen(
+                        //       name: nameController.text.toString(),
+                        //     ),
+                        //   ),
+                        // );
 
                         nameController.clear();
                         testimonyController.clear();

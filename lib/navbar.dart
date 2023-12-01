@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:thandri_sannidhi/contact.dart';
-import 'package:thandri_sannidhi/events.dart';
-import 'package:thandri_sannidhi/prayer_request.dart';
+import 'package:lottie/lottie.dart';
+import 'package:thandri_sannidhi/about.dart';
+import 'package:thandri_sannidhi/policy.dart';
 import 'package:thandri_sannidhi/testimony.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:lottie/lottie.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
@@ -69,16 +68,16 @@ class NavBar extends StatelessWidget {
               "Offering",
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
-            onTap: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) {
-              //       return const ContactScreen();
-              //     },
-              //   ),
-              // );
-            },
+            // onTap: () {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(
+            //       builder: (context) {
+            //         return PolicyScreen();
+            //       },
+            //     ),
+            //   );
+            // },
           ),
           ListTile(
             leading: const Icon(
@@ -91,14 +90,14 @@ class NavBar extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
             onTap: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) {
-              //       return const ContactScreen();
-              //     },
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return PolicyScreen();
+                  },
+                ),
+              );
             },
           ),
           ListTile(
@@ -133,14 +132,14 @@ class NavBar extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
             onTap: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) {
-              //       return const ContactScreen();
-              //     },
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return AboutScreen();
+                  },
+                ),
+              );
             },
           ),
           Lottie.asset("animations/sw_le.json"),

@@ -40,7 +40,10 @@ class _ShowDetailsState extends State<ShowDetails> {
               children: <Widget>[
                 Text(
                   songs[widget.index].details,
-                  style: const TextStyle(fontSize: 18),
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'ponnala',
+                  ),
                   textScaleFactor: _scaleFactor,
                 ),
               ],
